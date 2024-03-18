@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: #000000;
+    --main-color: #00CED1; /* Change text color to white */
+}
+
+html {
+    font-size: 72.5%;
+    height: 100%; /* Set html height to 100% */
+}
+
+body {
+    height: 100%; /* Set body height to 100% */
+    display: flex;
+    flex-direction: column; /* Set flex-direction to column */
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+    /* margin-bottom: -100px; */
+}
+
+/* Update the margin-bottom of the navbar to 0 */
+.navbar {
+    color: var(--main-color);
+    background-color: var(--main-bg);
+    padding: 1.3rem 0;
+    margin-bottom: 0; /* Added */
+}
+
+/* Update the margin-top of the main_header */
+.main_header {
+    margin-top: 0; /* Adjust the value as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a {
+    color: white;
+    font-size: 2rem 0;
+}
+
+.navbar-toggler {
+    color: white;
+    border-color: var(--main-color) !important;
+    background-color: transparent !important;
+}
+
+h1 {
+    /* color: brown; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fa-cloud-moon-rain {
+    transition: all linear;
+    animation: moveUpDown 0.8s infinite linear alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.carousel-item img {
+    max-width: 400px;
+    height: auto;
+}
+
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: -570px;
+    padding-right: 100px;
+}
+
+.main_header_left-2 {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: -2rem; /* Default margin-bottom */
+    padding-right: 100px;
+}
+
+.main_header_left .text {
+    color: var(--main-color); /* Apply custom color to specific element */
+}
+
+.main_header_left-2 .text {
+    color: var(--main-color); /* Apply custom color to specific element */
+}
+
+.main_header_left button, .main_header_left-2 button {
+    border-radius: 1.5rem;
+    padding: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 0 8px 6px -6px rgba(0, 206, 209, 0.7);
+    outline: none;
+}
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    padding-left: 100px;
+}
+
+/* Your existing CSS rules */
+.main_header_right figure img {
+    max-width: 60%;
+    margin-left: 100px;
+}
+
+.main_content {
+    flex: 1; /* Take remaining space */
+}
+
+footer {
+    background-color: var(--main-bg);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    /* flex-shrink: 0; Prevent footer from shrinking */
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        padding-top: 56px; /* Adjust this value based on your navbar height */
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+
+    .main_header {
+        margin-top: -56px; /* Negative value equal to navbar height */
+    }
+
+    .main_content {
+        padding-top: 0;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        z-index: 1040;
+    }
+
+    .main_header_left, .main_header_right {
+        padding: 0;
+    }
+
+    .main_header_left-2 {
+        margin-bottom: 0;
+    }
+}

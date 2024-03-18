@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: #000000;
+    --main-color:#00CED1; /* Change text color to white */
+}
+
+html {
+    font-size: 72.5%;
+    height: 100%; /* Set html height to 100% */
+}
+
+body {
+    height: 100%; /* Set body height to 100% */
+    display: flex;
+    flex-direction: column; /* Set flex-direction to column */
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+    /* margin-bottom: -100px; */
+}
+
+/* Update the margin-bottom of the navbar to 0 */
+.navbar {
+    color: var(--main-color);
+    background-color: var(--main-bg);
+    padding: 1.3rem 0;
+    margin-bottom: 0; /* Added */
+}
+
+/* Update the margin-top of the main_header */
+.main_header {
+    margin-top: 0; /* Adjust the value as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a {
+    color: white;
+    font-size: 2rem 0;
+}
+
+.navbar-toggler {
+    color: white;
+    border-color: var(--main-color) !important;
+    background-color: transparent !important;
+}
+
+h1 {
+    /* color: brown; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fa-cloud-moon-rain {
+    transition: all linear;
+    animation: moveUpDown 0.8s infinite linear alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.carousel-item img {
+    max-width: 400px;
+    height: auto;
+}
+
+
+
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: -570px;
+    padding-right: 100px;
+}
+
+.main_header_left-2 {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: -2rem; /* Default margin-bottom */
+    padding-right: 100px;
+}
+
+.main_header_left .text {
+    color: var(--main-color); /* Apply custom color to specific element */
+}
+
+.main_header_left-2 .text {
+    color: var(--main-color); /* Apply custom color to specific element */
+}
+
+.main_header_left button,.main_header_left-2 button{
+    border-radius: 1.5rem;
+    padding: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 0 8px 6px -6px rgba(0, 206, 209, 0.7);
+    outline: none;
+}
+
+
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    margin-top: 0; /* Adjust as needed */
+    padding-left: 100px;
+}
+
+
+
+
+
+/* Your existing CSS rules */
+.main_header_right figure img {
+    max-width: 60%;
+    margin-left: 100px;
+}
+
+.main_content {
+    flex: 1; /* Take remaining space */
+}
+
+/* Style the search box inside the navigation bar */
+.temp_form {
+    display: flex;
+    align-items: center; /* Vertically center the input and button */
+}
+
+#cityName {
+    flex-grow: 1; /* Expand to fill available space */
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 50rem;
+}
+
+#submitBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -80px; 
+    margin-top: 30px;
+}
+#submitBtn:hover{
+    background-color: #4ca0fa;
+    cursor: pointer;
+    
+}
+
+/* Weather information section */
+.tempInformation {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Top layer (day and date) */
+.top_layer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main layer (city name and temperature) */
+.main_layer {
+    text-align: center;
+}
+
+/* Temperature styles */
+#temp {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Temperature status (cloud icon) */
+#temp_status {
+    font-size: 24px;
+    color: #555;
+}
+
+
+footer {
+    background-color:var(--main-bg);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    /* flex-shrink: 0; Prevent footer from shrinking */
+}
+
+
+
+/* Your existing CSS rules */
+
+/* Your existing CSS rules */
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+    /* Adjust main_header layout */
+    .main_header {
+        margin-top: 0; /* Reset margin-top */
+        padding: 20px; /* Add padding to prevent content from going outside the page */
+    }
+
+    /* Ensure navbar-toggler stays above other content */
+    .navbar-toggler {
+        position: relative;
+        z-index: 1100;
+    }
+
+    /* Adjust tempInformation layout */
+    .tempInformation {
+        margin-top: 20px; /* Add space between main_content and tempInformation */
+        padding: 10px; /* Reduce padding */
+    }
+
+    /* Adjust input and button width */
+    #cityName {
+        margin-top: 20px; /* Add margin-top */
+        width: 100%; /* Adjust width to fill available space */
+    }
+
+    #submitBtn {
+
+        margin-left: 10px; /* Remove margin */
+        margin-top: 20px; /* Adjust margin-top */
+        width: calc(100% - 10px); /* Adjust width to fill available space */
+    }
+}
